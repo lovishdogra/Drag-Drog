@@ -14,6 +14,7 @@ class myView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         // Initialization code
         let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
         self.gestureRecognizers = [panRecognizer]
@@ -26,14 +27,17 @@ class myView: UIView {
         self.backgroundColor = UIColor(red:redValue, green: greenValue, blue: blueValue, alpha: 1.0)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        //fatalError("error in initilizing the view")
+    }
+
+    
     func detectPan(recognizer:UIPanGestureRecognizer) {
         let translation  = recognizer.translationInView(self.superview!)
         self.center = CGPointMake(lastLocation.x + translation.x, lastLocation.y + translation.y)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Promote the touched view
