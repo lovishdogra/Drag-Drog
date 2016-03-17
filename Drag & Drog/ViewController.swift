@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let insetSize = CGRectInset(self.view.bounds, CGFloat(Int(2 * halfSizeOfView)), CGFloat(Int(2 * halfSizeOfView))).size
         
         // Add the Views
-        for i in 0..<maxViews {
+        for _ in 0..<maxViews {
             let pointX = CGFloat(UInt(arc4random() %
                 UInt32(UInt(insetSize.width))))
             let pointY = CGFloat(UInt(arc4random() %
