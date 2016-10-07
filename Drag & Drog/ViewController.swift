@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+                
         let halfSizeOfView = 25.0
         let maxViews = 25
         let insetSize = CGRectInset(self.view.bounds, CGFloat(Int(2 * halfSizeOfView)), CGFloat(Int(2 * halfSizeOfView))).size

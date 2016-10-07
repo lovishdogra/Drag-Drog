@@ -16,7 +16,7 @@ class myView: UIView {
         super.init(frame: frame)
         
         // Initialization code
-        let panRecognizer = UIPanGestureRecognizer(target:self, action:"detectPan:")
+        let panRecognizer = UIPanGestureRecognizer(target:self, action:#selector(myView.detectPan(_:)))
         self.gestureRecognizers = [panRecognizer]
         
         //randomize view color
